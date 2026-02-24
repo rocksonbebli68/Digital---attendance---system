@@ -86,3 +86,23 @@ public:
         cout << "Duration: " << duration << " hrs\n";
     }
 };
+void markAttendance(Student students[], int count) {
+
+    if(count == 0){
+        cout << "No students available.\n";
+        return;
+    }
+
+    for(int i = 0; i < count; i++) {
+
+        cout << "\nStudent: " << students[i].name << endl;
+        cout << "1. Present\n2. Absent\n3. Late\nChoice: ";
+
+        int choice;
+        cin >> choice;
+
+        if(choice == 1) attendance[i] = "Present";
+        else if(choice == 2) attendance[i] = "Absent";
+        else attendance[i] = "Late";
+    }
+}
